@@ -225,6 +225,7 @@ export default function Registration (props) {
           <Button id="submit-form-button"
                   variant="contained"
                   disabled = {validationErrors !== emptyErrors}
+                  type = "submit"
                   onClick={submitForm}>
             Register!
           </Button>

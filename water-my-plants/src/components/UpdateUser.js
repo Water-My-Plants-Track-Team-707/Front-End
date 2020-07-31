@@ -138,7 +138,7 @@ const UpdateUser = () => {
             </CardContent>
             <CardActions>
               <br />
-              <Button>Save</Button>
+              <Button type = "submit">Save</Button>
               <Button onClick={() => setEditing(false)}>Cancel</Button>
             </CardActions>
           </Card>

@@ -97,7 +97,7 @@ const AddPlant = () => {
                 />
                 </CardContent>
                 <CardActions>
-                <Button>Save</Button>
+                <Button type = "submit">Save</Button>
                 </CardActions>
                 </Card>
             </form>

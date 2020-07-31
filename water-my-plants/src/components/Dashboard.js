@@ -49,9 +49,9 @@ const Dashboard = () => {
     return (
         <UserContext.Provider value = {{ userInfo, setUserInfo, setIsUpdated }}>
             <PlantContext.Provider value = {{ isUpdated, getPlants, plantList, setPlantList, setIsUpdated }}>
-                   <div><UpdateUser />
+<UpdateUser />
                     <AddPlant/>
-                    </div> 
+
                     <PlantList />
             </PlantContext.Provider>
         </UserContext.Provider>
