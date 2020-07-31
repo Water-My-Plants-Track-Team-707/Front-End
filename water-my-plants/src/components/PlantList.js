@@ -137,7 +137,7 @@ const PlantList = () => {
                       <Button onClick={() => deletePlant(plant)}>Delete</Button>
                       <div>
                         {editing && (
-                            <form onSubmit={saveEdit}>
+                            <form>
                                 <Card>
                                     <CardContent>
                                         <TextField
@@ -172,7 +172,7 @@ const PlantList = () => {
                                         <br />
                                     </CardContent>
                                     <CardActions>
-                                        <Button>Save</Button>
+                                        <Button onClick={saveEdit}>Save</Button>
                                         <Button onClick={() => setEditing(false)}>Cancel</Button>
                                     </CardActions>
                                 </Card>

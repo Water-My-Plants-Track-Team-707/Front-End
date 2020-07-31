@@ -95,7 +95,7 @@ const UpdateUser = () => {
         </div>
       </Card>
       {editing && (
-        <form onSubmit={saveEdit}>
+        <form>
           <Card>
             <CardContent>
               <h3>Edit Profile</h3>
@@ -109,7 +109,6 @@ const UpdateUser = () => {
                             />
                         </label> */}
               <br />
-
               <TextField
                 label="Password"
                 type="password"
@@ -117,9 +116,7 @@ const UpdateUser = () => {
                 value={user.password}
                 onChange={handleChange}
               />
-
               <br />
-
               <TextField
                 label="email"
                 type="text"
@@ -127,7 +124,6 @@ const UpdateUser = () => {
                 value={user.email}
                 onChange={handleChange}
               />
-
               <TextField
                 label="phone"
                 type="text"
@@ -138,7 +134,7 @@ const UpdateUser = () => {
             </CardContent>
             <CardActions>
               <br />
-              <Button>Save</Button>
+              <Button onClick={saveEdit}>Save</Button>
               <Button onClick={() => setEditing(false)}>Cancel</Button>
             </CardActions>
           </Card>
