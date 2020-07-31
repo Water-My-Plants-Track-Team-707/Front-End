@@ -15,20 +15,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     maxHeight: "600px",
   },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
+  
 }));
 
 const UpdateUser = () => {
@@ -42,6 +29,8 @@ const UpdateUser = () => {
     password: userInfo.password,
     phone: userInfo.phone,
   });
+
+  const classes = useStyles();
 
   const editUser = (user) => {
     setEditing(true);
@@ -80,7 +69,7 @@ const UpdateUser = () => {
 
   return (
     <div className="user-container">
-      <Card>
+      <Card className = {classes.root}>
         <CardHeader title="Profile" />
         <div className="user-info">
           <CardContent>
