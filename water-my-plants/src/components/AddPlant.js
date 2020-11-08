@@ -54,7 +54,7 @@ const AddPlant = () => {
     return (
         <div className='new-plant'>
             <form>
-                <Card>
+                <Card style={{marginTop: '10%'}}>
                     <CardHeader title = "Add a Plant"/>
                     <CardContent>
                         <TextField

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
@@ -21,10 +21,10 @@ export default function App() {
       <CssBaseline />
       <Container style={{
         display: "flex",
-        justifyContent: "center",
-        backgroundColor: "#DBF9F0",
+        justifyContent: "space-evenly",
+        // backgroundColor: "#014220",
         height: "95vh",
-        opacity: "90%",
+        // opacity: "90%",
         maxWidth: 'lg',
       }}>
         <Switch>
@@ -37,11 +37,11 @@ export default function App() {
           </Route>
         </Switch>
       </Container>
-      <footer position="fixed"
+      {/* <footer position="fixed"
               style={{ background: "#16302B",
                        boxShadow: "none",
                        height:'5vh'}}>
-      </footer>
+      </footer> */}
     </div>
   );
 }

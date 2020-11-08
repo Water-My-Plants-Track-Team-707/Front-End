@@ -25,6 +25,7 @@ const initialPlant = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: '10%',
     width: "345px",
     backgroundColor: "white",
     maxHeight: "800px",
@@ -92,9 +93,9 @@ const PlantList = () => {
   };
 
   return (
-    <div className="plant-container" styles = {{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
+    <div className="plant-container">
       <h3>My Plants</h3>
-      <div className="plant-list">
+      <div className="plant-list" styles = {{display: "flex", flexFlow: 'column wrap'}}>
         {!plantList ? (
           <div />
         ) : (
@@ -134,11 +135,11 @@ const PlantList = () => {
                   <CardContent>
                     <Typography paragraph>
                       {/* <Button onClick={() => editPlant(plant)}>Edit</Button> */}
-                      <Button onClick={() => deletePlant(plant)}>Delete</Button>
-                      <div>
-                        {editing && (
+                      {/* <div> */}
+                        {editing && ( //if editing is truthy, returns form
                             <form>
                                 <Card>
+                                <CardHeader title='Edit Plant' />
                                     <CardContent>
                                         <TextField
                                         label = "nickname"
@@ -174,11 +175,12 @@ const PlantList = () => {
                                     <CardActions>
                                         <Button onClick={saveEdit}>Save</Button>
                                         <Button onClick={() => setEditing(false)}>Cancel</Button>
+                                        <Button onClick={() => deletePlant(plant)}>Delete</Button>
                                     </CardActions>
                                 </Card>
                             </form> 
                         )}
-                      </div>
+                      {/* </div> */}
                     </Typography>
                   </CardContent>
                 </Collapse>
